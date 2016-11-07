@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body class="cuerpo">
+       <h1>Exportar Reporte Lugares por Propietario</h1>
+       <h:form>                  
+           <h:panelGrid columns="2" cellpadding="5" class="ui-grid">     
+		        <p:outputLabel value="Email:" for="email" />
+		        <p:inputText  id="email" value="#{propietario.email}"/> 
+           </h:panelGrid> 
+             <p:commandButton value="Exportar PDF" ajax="false"
+                    onclick="PrimeFaces.monitorDownload(start, stop);"
+                    icon="ui-icon-arrowthick-1-s">
+                    <p:fileDownload value="#{reporteCommand.exportarPDFF3(propietario)}" />
+             </p:commandButton>
+       </h:form>
+</h:body>
+</html>

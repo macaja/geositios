@@ -1,0 +1,35 @@
+<form method="post" action="PropietarioControl" >
+Nombre del Lugar: </br>
+<div class="divtext">
+<input type="text" name="NombreLugar" class="textbox" maxlength="30" placeholder="Nombre del Lugar" autofocus required></br>
+</div>
+Telefono:</br>
+<div class="divtext">
+<input type="text" name="telefono" class="textbox" pattern="[0-9]{4,11}" title="Solo numeros (4-11)" placeholder="Telefono"></br>
+</div>
+Latitud:</br>
+<div class="divtext">
+<input type="text" name="latitud" class="textbox" pattern="[0-9.+-]+" title="numeros y puntos" placeholder="latitud" required></br>
+</div>
+Longitud:</br>
+<div class="divtext">
+<input type="text" name="longitud" class="textbox" pattern="[0-9.+-]+" title="numeros y puntos" placeholder="longitud" required></br>
+</div>
+Categoria:</br>
+<div class="divtext">
+<select name="categoria">
+<option value="1">Restaurante</option>
+<option value="2">Bares</option>
+<option value="3">Hoteles</option>
+<option value="4">Universidades</option>
+<option value="5">Centros Comerciales</option>
+</select></br>
+</div>
+Descripcion:</br>
+<div class="divtext">
+<input type="text" name="descripcion" class="textbox" placeholder="Descripcion"required></br>
+</div>
+<div class="bsub">
+<input type="submit" name="ok" value="RegistrarLugar" class="button login sub">
+</div>
+</form>	

@@ -1,0 +1,15 @@
+<form method="post" action="enlace">
+<div class="divtext">
+Email:</br>
+<input type="email" name="correo" class="textbox" placeholder="Email" maxlenght="50" autofocus required></br>
+</div>
+Password: </br>
+<div class="divtext">
+<input type="password" name="password" class="textbox" placeholder="Password" required></br>
+</div>
+<div class="bsub">
+<input type="submit" name="ok" value="Entrar" class="button login sub">
+</div>
+</form>
+
+

@@ -1,0 +1,2 @@
+2- como usuario quiero almacenar mis lugares favoritos en un botón
+8- como propietario deseo poder ver mis lugares registrados 

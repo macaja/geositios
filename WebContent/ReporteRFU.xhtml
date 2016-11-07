@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<h:body class="cuerpo">
+       <h1>Exportar Reporte Usuarios por Fecha Contreseña</h1>
+       <h:form>                  
+            <h:panelGrid columns="2" cellpadding="5" class="ui-grid">     
+		        <p:outputLabel value="Año:" for="acSimple" />
+		        <p:spinner min="2000" max="2016" id="acSimple" value="#{fechaPassword.año}"/> 
+		        <h:outputLabel for="acMinLength" value="Mes:" />
+		        <p:spinner min="1" max="12" id="acMinLength" value="#{fechaPassword.mes}" />
+		        <h:outputLabel for="dia" value="Día:" />
+		        <p:spinner min="1" max="31" id="dia" value="#{fechaPassword.dia}" />
+           </h:panelGrid>
+             <p:commandButton value="Exportar PDF" ajax="false"
+                    onclick="PrimeFaces.monitorDownload(start, stop);"
+                    icon="ui-icon-arrowthick-1-s">
+                    <p:fileDownload value="#{reporteCommand.exportarPDFF1(fechaPassword)}" />
+             </p:commandButton>
+       </h:form>
+</h:body>
+</html>
